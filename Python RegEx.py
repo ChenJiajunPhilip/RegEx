@@ -26,7 +26,7 @@ Mr. T
 '''
 
 sentence = 'Start a sentence and then bring it to an end'
-user_input = input()
+user_input = input("what do you want to search for? ")
 #x = re.compile(r'coreyms\.com')
 x = re.compile(user_input)
 y=x.finditer(text_to_search)
