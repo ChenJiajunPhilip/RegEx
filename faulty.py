@@ -26,10 +26,17 @@ Mr. T
 '''
 
 sentence = 'Start a sentence and then bring it to an end'
-user_input = input("what do you want to search for? ")
+user_input1 = input("which is your source text? text_to_search or sentence? ")
+user_input2 = input("what do you want to search for? ")
 #x = re.compile(r'coreyms\.com')
-x = re.compile(user_input)
-y=x.finditer(text_to_search)
+
+def to_raw(string):
+    return fr"{string}"
+
+
+x = re.compile(to_raw(user_input2))
+#y=x.finditer(text_to_search)
+y=x.finditer(user_input1)
 for i in y:
     print(i)
     k = 24
@@ -56,5 +63,5 @@ for i in y:
     num2 = int(num2)
     print(num1)
     print(num2)
-    print(text_to_search[num1:num2])
-
+    #print(text_to_search[num1:num2])
+    print(user_input1[num1:num2])
